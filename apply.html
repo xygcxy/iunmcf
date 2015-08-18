@@ -16,11 +16,11 @@
 		<option value="design">新媒体设计报名</option>
 		<option value="innovation">新媒体创新报名</option>
       </select>
-    </div>
+</div>
 <br>
 <div class="apply_film">
-<form action="" method="post" class="form-horizontal">
-	<input type="hidden" value="film">
+<form action="submit.php" method="post" class="form-horizontal">
+	<input type="hidden" value="film" name="apply_type">
     <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">
@@ -82,10 +82,10 @@
 	    <label for="inputEmail3" class="col-sm-2 control-label">制片制度：</label>
 	    <div class="col-sm-10">
         <label class="radio-inline">
-		  <input type="radio" id="producer" name="role" value="producer"> 制片人制
+		  <input type="radio" id="producer" name="role" value="制片人制">制片人制
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" id="detector" name="role" value="detector"> 导演制
+		  <input type="radio" id="detector" name="role" value="导演制">导演制
 		</label>
 		</div>
 		</div>
@@ -268,8 +268,8 @@
 </div>
 <br>
 <div class="communication">
-<form action="" method="post" class="form-horizontal">
-<input type="hidden" value="communication">
+<form action="submit.php" method="post" class="form-horizontal">
+<input type="hidden" value="communication" name="apply_type">
 <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">
@@ -431,8 +431,8 @@
     </form>
 </div>
 <div class="design">
-<form action="" method="post" class="form-horizontal">
-<input type="hidden" value="design">
+<form action="submit.php" method="post" class="form-horizontal">
+<input type="hidden" value="design" name="apply_type">
 <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">
@@ -584,8 +584,8 @@
     </form>
 </div>
 <div class="innovation">
-<form action="" method="post" class="form-horizontal">
-<input type="hidden" value="innovation">
+<form action="submit.php" method="post" class="form-horizontal">
+<input type="hidden" value="innovation" name="apply_type">
 <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">

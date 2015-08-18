@@ -2,6 +2,9 @@
 	margin: 0 auto;
     overflow: hidden;
 }
+.communication, .design, .innovation {
+    display: none;
+}
 
 .submit_button {
 	text-align: center;
