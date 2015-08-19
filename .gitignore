@@ -1,0 +1,8 @@
+./.settings
+./.classpath
+./.project
+.DS_Store
+.idea
+*.log
+node_modules
+build
