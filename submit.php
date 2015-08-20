@@ -10,6 +10,7 @@ $dataYear = substr($dateArray[0], 2, 2);
 
 $apply_type = $_POST['apply_type'];
 
+
 if ($apply_type == 'film') {
 	$count = $db->count("SELECT COUNT(*) FROM `apply_film`");
 	$apply_id = 'F'.$dataYear.$dateArray[1].$dateArray[2].sprintf("%05d", $count+1);

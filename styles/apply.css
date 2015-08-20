@@ -1,11 +1,12 @@
 body{
-    background: url("background.png") repeat;
+    background: url("back.png") repeat;
 }
 *{
     color: #fff;
 }
 legend{
     color: #fff;
+    padding-left: 15px;
 }
 .form-control {
     width: 92%;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 <head>
 <link rel="stylesheet" type="text/css" href="./styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="./styles/apply.css">
@@ -25,45 +25,45 @@
     <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">作品名称：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">作品名称 Name of Work：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="name" name="work_name" placeholder="Email">
+	      <input class="form-control" id="name" name="work_name" placeholder="作品名称 Name of Work">
 	    </div>
 	    </div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">作品类型：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">作品类型 Type of Work：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="type" name="work_type" placeholder="Email">
+	      <input class="form-control" id="type" name="work_type" placeholder="作品类型 Type of Work">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">时长：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">时长 Duration：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="time" name="duration" placeholder="Email">
+	      <input class="form-control" id="time" name="duration" placeholder="时长 Duration">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">指导教师：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">指导教师 Instructor：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="teacher" name="instructor" placeholder="Email">
+	      <input class="form-control" id="teacher" name="instructor" placeholder="指导教师 Instructor">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话 Tel/Mob：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="tel" name="tel" placeholder="Email">
+	      <input type="tel" class="form-control" id="tel" name="tel" placeholder="联系电话 Tel/Mob">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱地址：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱地址 Email：</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+	      <input type="email" class="form-control" id="email" name="email" placeholder="邮箱地址 Email">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址 Address：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="address" name="address" placeholder="Email">
+	      <input class="form-control" id="address" name="address" placeholder="联系地址 Address">
 	    </div>
   		</div>
 
@@ -71,171 +71,171 @@
     <fieldset>
         <legend>作品</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label" >参赛作品简介:</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label" >参赛作品简介 Introduction of Work:</label>
 	    <div class="col-sm-10">
-	      <textarea class="form-control" rows="3" name="introduction"></textarea>
+	      <textarea class="form-control" rows="3" name="introduction" placeholder="200字以内 Less than 200 words"></textarea>
 	    </div>
   		</div>
     </fieldset>
     <fieldset>
         <legend>团队资料 Team Introduction</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">制片制度：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">制片制度 Production System：</label>
 	    <div class="col-sm-10">
         <label class="radio-inline">
-		  <input type="radio" id="producer" name="product_system" value="制片人制">制片人制
+		  <input type="radio" id="producer" name="product_system" value="制片人制">制片人制 The producer
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" id="director" name="product_system" value="导演制">导演制
+		  <input type="radio" id="director" name="product_system" value="导演制">导演制 The director
 		</label>
 		</div>
 		</div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">出品单位：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">出品单位 Manufacturer：</label>
 	    <div class="col-sm-10">
-        <input name="manufacturer" type="text" value="" class="form-control" />
+        <input name="manufacturer" type="text" value="" class="form-control" placeholder="出品单位 Manufacturer"/>
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">制作人：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">制作人 Producer：</label>
 	    <div class="col-sm-10">
-        <input name="producer" type="text" value="" class="form-control"/>
+        <input name="producer" type="text" value="" class="form-control" placeholder="制作人 Producer" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">导演：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">导演 Director：</label>
 	    <div class="col-sm-10">
-        <input name="director" type="text" value="" class="form-control"/>
+        <input name="director" type="text" value="" class="form-control" placeholder="导演 Director" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">策划：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">策划 Planner：</label>
 	    <div class="col-sm-10">
-        <input name="pianner" type="text" value="" class="form-control"/>
+        <input name="pianner" type="text" value="" class="form-control" placeholder="策划 Planner" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">摄像：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">摄像 Photographer：</label>
 	    <div class="col-sm-10">
-        <input name="photoer" type="text" value="" class="form-control"/>
+        <input name="photoer" type="text" value="" class="form-control" placeholder="摄像 Photographer" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">剪辑：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">剪辑 Editor：</label>
 	    <div class="col-sm-10">
-        <input name="editor" type="text" value="" class="form-control"/>
+        <input name="editor" type="text" value="" class="form-control" placeholder="剪辑 Editor" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">译制：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">译制 Translator：</label>
 	    <div class="col-sm-10">
-        <input name="translator" type="text" value="" class="form-control"/>
+        <input name="translator" type="text" value="" class="form-control" placeholder="译制 Translator" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">音效：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">音效 Sound Engineer：</label>
 	    <div class="col-sm-10">
-        <input name="sound" type="text" value="" class="form-control"/>
+        <input name="sound" type="text" value="" class="form-control" placeholder="音效 Sound Engineer" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">灯光：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">灯光 Lighting Engineer：</label>
 	    <div class="col-sm-10">
-        <input name="light" type="text" value="" class="form-control"/>
+        <input name="light" type="text" value="" class="form-control" placeholder="灯光 Lighting Engineer" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">主要演员：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">主要演员 Actor：</label>
 	    <div class="col-sm-10">
-        <input name="actor" type="text" value="" class="form-control"/>
+        <input name="actor" type="text" value="" class="form-control" placeholder="主要演员 Actor" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">其他：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">其他 Other：</label>
 	    <div class="col-sm-10">
-        <input name="other" type="text" value="" class="form-control"/>
+        <input name="other" type="text" value="" class="form-control" placeholder="其他 Other" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系人：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系人 Contact Name：</label>
 	    <div class="col-sm-10">
-        <input name="contact" type="text" value="" class="form-control"/>
+        <input name="contact" type="text" value="" class="form-control" placeholder="联系人 Contact Name" />
 		</div>
 		</div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话 Tel/Mob：</label>
 	    <div class="col-sm-10">
-        <input name="team_tel" type="text" value="" class="form-control"/>
+        <input name="team_tel" type="text" value="" class="form-control" placeholder="联系电话 Tel/Mob" />
 		</div>
 		</div>
 		
 		
     </fieldset>
     <fieldset>
-        <legend>参赛作品主创个人资料</legend>
+        <legend>参赛作品主创个人资料 Personal information for Creater</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">姓名：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">姓名 Name：</label>
 	    <div class="col-sm-10">
-        <input name="person_name" type="text" value="" class="form-control" />
-        </div>
-        </div>
-        <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">性别：</label>
-	    <div class="col-sm-10">
-        <input name="gender" type="text" value="" class="form-control" />
+        <input name="person_name" type="text" value="" class="form-control" placeholder="姓名 Name" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">出生年月：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">性别 F/M：</label>
 	    <div class="col-sm-10">
-        <input name="birth" type="text" value="" class="form-control" />
+        <input name="gender" type="text" value="" class="form-control" placeholder="性别 F/M"/>
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">专业：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">出生年月 D.O.B：</label>
 	    <div class="col-sm-10">
-        <input name="profession" type="text" value="" class="form-control" />
+        <input name="birth" type="text" value="" class="form-control" placeholder="出生年月 D.O.B" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">学历：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">专业 Peofession：</label>
 	    <div class="col-sm-10">
-        <input name="edu_background" type="text" value="" class="form-control" />
+        <input name="profession" type="text" value="" class="form-control" placeholder="专业 Peofession" />
+        </div>
+        </div>
+        <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">学历 Educational Background：</label>
+	    <div class="col-sm-10">
+        <input name="edu_background" type="text" value="" class="form-control" placeholder="学历 Educational Background" />
         </div>
         </div>
 
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">年级：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">年级 Grade：</label>
 	    <div class="col-sm-10">
-        <input name="grade" type="text" value="" class="form-control" />
+        <input name="grade" type="text" value="" class="form-control" placeholder="年级 Grade" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">学校院系：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">学校院系 Academy：</label>
 	    <div class="col-sm-10">
-        <input name="academy" type="text" value="" class="form-control" />
+        <input name="academy" type="text" value="" class="form-control" placeholder="学校院系 Academy" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话 Tel/Mob：</label>
 	    <div class="col-sm-10">
-        <input name="person_tel" type="text" value="" class="form-control" />
+        <input name="person_tel" type="tel" value="" class="form-control" placeholder="联系电话 Tel/Mob" />
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱 Email：</label>
 	    <div class="col-sm-10">
-        <input name="person_email" type="text" value="" class="form-control" />
+        <input name="person_email" type="email" value="" class="form-control" placeholder="邮箱 Email"/>
         </div>
         </div>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址 Address：</label>
 	    <div class="col-sm-10">
-        <input name="person_address" type="text" value="" class="form-control" />
+        <input name="person_address" type="text" value="" class="form-control" placeholder="联系地址 Address" />
         </div>
         </div>
 		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">活动获取途径：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">活动获取途径 The Acess to Activity Information：</label>
 	    <div class="col-sm-10">
         <label class="radio-inline">
 		  <input type="radio" name="access" id="weibo" value="weibo"> 微博
@@ -261,7 +261,7 @@
     <br>
     <div class="submit_button">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-submit">提交</button>
+      <button type="submit" class="btn btn-primary">提交</button>
       <button type="reset" class="btn btn-default">重置</button>
     </div>
   </div>
@@ -273,141 +273,141 @@
 <fieldset>
         <legend>基本信息</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">公众号名称：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">公众号名称 Public Number Name：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="wechat_name" name="wechat_name" placeholder="公众号">
+	      <input class="form-control" id="wechat_name" name="wechat_name" placeholder="公众号名称 Public Number Name">
 	    </div>
 	    </div>
 	    <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">公众号类型：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">公众号类型 Public Number Type：</label>
 	    <div class="col-sm-10">
         <label class="radio-inline">
-		  <input type="radio" name="wechat_type" id="wechatcollege" value="院校">院校
+		  <input type="radio" name="wechat_type" id="wechatcollege" value="院校">院校 Instruction
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="wechat_type" id="students" value="学生团体">学生团体
+		  <input type="radio" name="wechat_type" id="students" value="学生团体">学生团体Students Group
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="wechat_type" id="teacher" value="教师个人">教师个人
+		  <input type="radio" name="wechat_type" id="teacher" value="教师个人">教师个人 Teacher Personal
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="wechat_type" id="student" value="学生个人">学生个人
+		  <input type="radio" name="wechat_type" id="student" value="学生个人">学生个人Peronal Students
 		</label>	
 		</div>
 		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">项目负责人：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">项目负责人Project Manager：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="manager" name="manager" placeholder="Email">
+	      <input class="form-control" id="manager" name="manager" placeholder="项目负责人Project Manager">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话 Tel/Mob：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="tel" name="tel" placeholder="Email">
+	      <input type="tel" class="form-control" id="tel" name="tel" placeholder="联系电话 Tel/Mob">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱 Email：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="eamil" name="email" placeholder="Email">
+	      <input class="form-control" id="eamil" name="email" placeholder="邮箱 Email">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址 Address：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="address" name="address" placeholder="Email">
+	      <input class="form-control" id="address" name="address" placeholder="联系地址 Address">
 	    </div>
   		</div>
   	</fieldset>	
     <fieldset>
-    <legend>运营者个人资料</legend>
+    <legend>运营者个人资料 Operation of Personal data</legend>
         <div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">姓名：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">姓名 Name：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="username" name="person_name" placeholder="Email">		
+	      <input class="form-control" id="username" name="person_name" placeholder="姓名 Name">		
 		</div>
 		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">性别：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">性别 F/M：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="sex" name="gender" placeholder="Email">
+	      <input class="form-control" id="sex" name="gender" placeholder="性别 F/M">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">学历：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">学历 Education Background：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="background" name="edu_background" placeholder="Email">
+	      <input class="form-control" id="background" name="edu_background" placeholder="学历 Education Background">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">出生年月：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">出生年月 D.O.B：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="birth" name="birth" placeholder="Email">
+	      <input class="form-control" id="birth" name="birth" placeholder="出生年月 D.O.B">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">专业：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">专业 Profession：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="profession" name="profession" placeholder="Email">
+	      <input class="form-control" id="profession" name="profession" placeholder="专业 Profession">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">年级：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">年级 Grade：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="grade" name="grade" placeholder="Email">
+	      <input class="form-control" id="grade" name="grade" placeholder="年级 Grade">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">证件号（身份证、护照）：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">证件号（身份证、护照）ID/Passport：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="number" name="id_number" placeholder="Email">
+	      <input class="form-control" id="number" name="id_number" placeholder="证件号（身份证、护照）ID/Passport">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">学校院系：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">学校院系 Academy：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="college" name="academy" placeholder="Email">
+	      <input class="form-control" id="college" name="academy" placeholder="学校院系 Academy">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系电话 Tel/Mob：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="usertel" name="person_tel" placeholder="Email">
+	      <input class="form-control" id="usertel" name="person_tel" placeholder="联系电话 Tel/Mob">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">邮箱 Email：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="useremail" name="person_email" placeholder="Email">
+	      <input type="email" class="form-control" id="useremail" name="person_email" placeholder="邮箱 Email">
 	    </div>
   		</div>
   		<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">联系地址 Address：</label>
 	    <div class="col-sm-10">
-	      <input class="form-control" id="useraddress" name="person_address" placeholder="Email">
+	      <input class="form-control" id="useraddress" name="person_address" placeholder="联系地址 Address">
 	    </div>
   		</div>
     	<div class="form-group">
-	    <label for="inputEmail3" class="col-sm-2 control-label">活动获取途径：</label>
+	    <label for="inputEmail3" class="col-sm-2 control-label">活动获取途径 The Access To Activity Information：</label>
 	    <div class="col-sm-10">
         <label class="radio-inline">
-		  <input type="radio" name="access" id="weibo" value="weibo"> 微博
+		  <input type="radio" name="access" id="weibo" value="weibo">微博 weibo
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="access" id="wechat" value="wechat"> 微信
+		  <input type="radio" name="access" id="wechat" value="wechat">微信 wechat
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="access" id="net" value="net"> 官网
+		  <input type="radio" name="access" id="net" value="net">官网 net
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="access" id="techer" value="techer"> 老师
+		  <input type="radio" name="access" id="techer" value="teacher">老师 teacher
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="access" id="student" value="student"> 学生
+		  <input type="radio" name="access" id="student" value="student">学生 student
 		</label>
 		<label class="radio-inline">
-		  <input type="radio" name="access" id="other" value="user_other"> 其他
+		  <input type="radio" name="access" id="other" value="user_other">其他 other
 		</label>
 		</div>
 		</div>
@@ -417,14 +417,14 @@
         <div class="form-group">
 	    <label for="inputEmail3" class="col-sm-2 control-label">参赛作品简介:</label>
 	    <div class="col-sm-10">
-	      <textarea class="form-control" rows="3" name="introduction"></textarea>
+	      <textarea class="form-control" rows="3" name="introduction" placeholder="200字以内 Less than 200 words"></textarea>
 	    </div>
   		</div>
     </fieldset>
     <br>
     <div class="submit_button">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-submit">提交</button>
+      <button type="submit" class="btn btn-primary">提交</button>
       <button type="reset" class="btn btn-default">重置</button>
     </div>
     </div>
@@ -577,7 +577,7 @@
     <br>
     <div class="submit_button">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-submit">提交</button>
+      <button type="submit" class="btn btn-primary">提交</button>
       <button type="reset" class="btn btn-default">重置</button>
     </div>
     </div>
@@ -765,7 +765,7 @@
     <br>
     <div class="submit_button">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-submit">提交</button>
+      <button type="submit" class="btn btn-primary">提交</button>
       <button type="reset" class="btn btn-default">重置</button>
     </div>
     </div>
