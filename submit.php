@@ -10,7 +10,6 @@ $dataYear = substr($dateArray[0], 2, 2);
 
 $apply_type = $_POST['apply_type'];
 
-
 if ($apply_type == 'film') {
 	$count = $db->count("SELECT COUNT(*) FROM `apply_film`");
 	$apply_id = 'F'.$dataYear.$dateArray[1].$dateArray[2].sprintf("%05d", $count+1);
@@ -51,7 +50,8 @@ if ($apply_type == 'film') {
 	);
 	if($db->insert('apply_film', $film_array)){
 		echo "<script type=\"text/javascript\">alert('报名成功');</script>";
-		echo "<script type=\"text/javascript\">window.location.href=\"\";</script>";
+		header("Location:film_back.php?apply_id=".$apply_id);
+		exit;
 	}else{
 		echo "<script type=\"text/javascript\">alert('报名错误,请仔细核查你所填的信息');</script>";
 		echo "<script type=\"text/javascript\">history.go(-1);</script>";
@@ -83,7 +83,8 @@ if ($apply_type == 'film') {
 	);
 	if($db->insert('apply_communication', $communication_array)){
 		echo "<script type=\"text/javascript\">alert('报名成功');</script>";
-		echo "<script type=\"text/javascript\">window.location.href=\"\";</script>";
+		header("Location:communication_back.php?apply_id=".$apply_id);
+		exit;
 	}else{
 		echo "<script type=\"text/javascript\">alert('报名错误,请仔细核查你所填的信息');</script>";
 		echo "<script type=\"text/javascript\">history.go(-1);</script>";
@@ -115,7 +116,8 @@ if ($apply_type == 'film') {
 	);
 	if($db->insert('apply_design', $design_array)){
 		echo "<script type=\"text/javascript\">alert('报名成功');</script>";
-		echo "<script type=\"text/javascript\">window.location.href=\"\";</script>";
+		header("Location:design_back.php?apply_id=".$apply_id);
+		exit;
 	}else{
 		echo "<script type=\"text/javascript\">alert('报名错误,请仔细核查你所填的信息');</script>";
 		echo "<script type=\"text/javascript\">history.go(-1);</script>";
@@ -150,7 +152,8 @@ if ($apply_type == 'film') {
 	);
 	if($db->insert('apply_innovation', $film_array)){
 		echo "<script type=\"text/javascript\">alert('报名成功');</script>";
-		echo "<script type=\"text/javascript\">window.location.href=\"\";</script>";
+		header("Location:innovation_back.php?apply_id=".$apply_id);
+		exit;
 	}else{
 		echo "<script type=\"text/javascript\">alert('报名错误,请仔细核查你所填的信息');</script>";
 		echo "<script type=\"text/javascript\">history.go(-1);</script>";
