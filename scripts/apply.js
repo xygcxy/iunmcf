@@ -24,6 +24,10 @@
 			$('.communication').css('display', 'none');
 			$('.design').css('display', 'none');
 			$('.innovation').css('display', 'block');
+			
 		};
 	})
+
+	
+
 })()

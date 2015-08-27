@@ -3,7 +3,7 @@ body{
 }
 
 .main {
-	margin: 190px auto;
+	margin: 20px auto;
     font-size: 25px;
     line-height: 50px;
 }
@@ -15,4 +15,14 @@ body{
 .main a{
 	color: red;
 	text-decoration: underline;
+}
+span.normal {
+	color: #000;
+}
+
+.down {
+	background: url(../styles/down_btn.jpg);
+	display: inline-block;
+	width: 216px;
+	height: 65px;
 }

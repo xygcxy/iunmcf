@@ -11,12 +11,11 @@
 <div class="main">
 	<div class="container"><span>恭喜您线上报名成功！</span></div>
 	<div class="container">您的唯一提交报名编号为<span>【<?php echo $_GET['apply_id'] ?>】</span>，请保存！</div>
-	<div class="container">接下来请您下载填写<span>【<a href="">新媒体视频参赛授权书</a>】</span>另附<span>【作品光盘】</span>邮寄至国际大学生新媒体文化节组委会（邮寄地址在授权书尾页）</div>
+	<div class="container"> 接下来请您下载填写<span>【<a href="">新媒体传播参赛授权书</a></span>】邮寄至国际大学生新媒体文化节组委会（邮寄地址在授权书尾页）</div>
 	<div class="container">
 	文件下载
-		<a href="./document/新媒体视频参赛授权书.zip" class="down"></a>
+		<a href="./document/新媒体传播参赛授权书.zip" class="down"></a>
 	</div>
 	</div>
-
-</body>
+	</body>
 </html>

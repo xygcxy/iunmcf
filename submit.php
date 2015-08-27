@@ -10,6 +10,7 @@ $dataYear = substr($dateArray[0], 2, 2);
 
 $apply_type = $_POST['apply_type'];
 
+
 if ($apply_type == 'film') {
 	$count = $db->count("SELECT COUNT(*) FROM `apply_film`");
 	$apply_id = 'F'.$dataYear.$dateArray[1].$dateArray[2].sprintf("%05d", $count+1);
@@ -91,7 +92,7 @@ if ($apply_type == 'film') {
 	}
 } else if ($apply_type == 'design') {
 	$count = $db->count("SELECT COUNT(*) FROM `apply_design`");
-	$apply_id = 'F'.$dataYear.$dateArray[1].$dateArray[2].sprintf("%05d", $count+1);
+	$apply_id = 'D'.$dataYear.$dateArray[1].$dateArray[2].sprintf("%05d", $count+1);
 	$design_array = array(
 		'design_name'	=>	$_POST['design_name'],
 		'apply_id' => $apply_id,

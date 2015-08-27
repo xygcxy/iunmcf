@@ -4,5 +4,6 @@
 .DS_Store
 .idea
 *.log
+/document/*
 node_modules
 build
