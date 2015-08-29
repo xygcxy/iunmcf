@@ -1,0 +1,1 @@
+<aside class="sidebar"><?php $uazoh_sidebars = get_post_meta($post->ID, 'uazoh_all_sidebars', true);if(!empty($uazoh_sidebars)) { dynamic_sidebar( $uazoh_sidebars );}else {if ( is_active_sidebar( 'sidebar' ) ) { dynamic_sidebar( 'sidebar' ); }}?></aside>

@@ -1,0 +1,1 @@
+<?php get_header(); require_once( dirname( __FILE__ ) . '/includes/tmplane-format.php' );get_footer(); ?>
