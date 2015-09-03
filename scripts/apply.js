@@ -26,6 +26,15 @@
 			$('.innovation').css('display', 'block');
 			
 		};
+	});
+	$('.change-en').toggle(function () {
+		$('.en').css('display', 'block');
+		$('.zh').css('display', 'none');
+		$(this).text('改变语言：中文');
+	}, function () {
+		$('.en').css('display', 'none');
+		$('.zh').css('display', 'block');
+		$(this).text('Change Language:English');
 	})
 
 	

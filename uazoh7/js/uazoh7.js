@@ -544,6 +544,15 @@
 	    	}
 	    });
 	});
+
+
+	jQuery('.down-arrow').toggle(function () {
+		jQuery('.world').animate({height:"450px"}, 500);
+	}, function () {
+		jQuery('.world').animate({height:"0px"}, 500);
+	});
+
+
 })(jQuery);
 /* SIDEBAR FIXED BOX */
 jQuery(window).on('load', function () {

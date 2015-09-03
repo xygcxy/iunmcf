@@ -8,7 +8,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<i class="fa fa-<?php echo $smof_data['class_01_icon'] ?>"></i><span class="arrow"></span><br />
+<a href=""><i class="fa fa-<?php echo $smof_data['class_01_icon'] ?> film"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_01_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_01'] ?></p>
@@ -16,8 +16,8 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 </div>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
-<header>
-<i class="fa fa-<?php echo $smof_data['class_02_icon'] ?>"></i><span class="arrow"></span><br />
+<header> 
+<a href=""><i class="fa fa-<?php echo $smof_data['class_02_icon'] ?> communication"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_02_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_02'] ?></p>
@@ -26,7 +26,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<i class="fa fa-<?php echo $smof_data['class_03_icon'] ?>"></i><span class="arrow"></span><br />
+<a href=""><i class="fa fa-<?php echo $smof_data['class_03_icon'] ?> design"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_03_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_03'] ?></p>
@@ -35,7 +35,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<i class="fa fa-<?php echo $smof_data['class_04_icon'] ?>"></i><span class="arrow"></span><br />
+<a href=""><i class="fa fa-<?php echo $smof_data['class_04_icon'] ?> innovation"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_04_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_04'] ?></p>
@@ -46,27 +46,6 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 </section>
 <?php } 
 
-/* 项目展示 */ 
-
-if(isset($smof_data['feature_switch']) && ($smof_data['feature_switch'] != 0)) { ?>
-<section class="uazoh7-section uazoh7-section-align-center">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<?php if(isset($smof_data['feature_title']) && ($smof_data['feature_title'] !='')) {echo '<h2>'.$smof_data['feature_title'].'</h2>';}?>
-<?php if(isset($smof_data['feature_subheading']) && ($smof_data['feature_subheading'] !='')) { echo '<p class="block-description">'.$smof_data['feature_subheading'].'</p>'; }?>
-<?php if(isset($smof_data['feature_yext']) && ($smof_data['feature_yext'] !='')) { echo '<p>'.$smof_data['feature_yext'].'</p>'; }?>
-<div class="uazoh7-relative" id="latest-projects">
-<?php dynamic_sidebar( 'homepage-project' ); ?>
-<div class="uazoh7-navigation rivaslider-navigation">
-<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<?php }
 
 /* 关于我们 */  
  
@@ -91,7 +70,9 @@ if(isset($smof_data['about_uss']) && ($smof_data['about_uss'] != 0)) { ?>
 </div>
 </div>
 </div>
+<div class="down-arrow"></div>
 </section>
+<section class="world"></section>
 <?php }
 
 /* 首页文章 */   
@@ -104,8 +85,8 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 <?php if(isset($smof_data['homepage_post_title']) && ($smof_data['homepage_post_title'] !='')) {echo '<h2>'.$smof_data['homepage_post_title'].'</h2>';}?>
 <div class="uazoh7-relative" id="latest-news">
 <?php dynamic_sidebar( 'homepage-post' ); ?>
-<div class="uazoh7-navigation uazoh7-navigation-center rivaslider-navigation">
-<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a></p></div>
+<!-- <div class="uazoh7-navigation uazoh7-navigation-center rivaslider-navigation">
+<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a></p></div> -->
 </div>
 </div>
 </div>
@@ -113,12 +94,44 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 <div class="activity">
 <h2 style="margin-top: 0px;">活动一览</h2>
 	<ul>
-		<li>111111</li>
+		<li><?php dynamic_sidebar( 'homepage-activity' ); ?></li>
 	</ul>
 </div>
 </section>
 <?php } 
 if (have_posts()) { while (have_posts()) { the_post(); the_content(); }} 
+
+/* 项目展示 */ 
+
+if(isset($smof_data['feature_switch']) && ($smof_data['feature_switch'] != 0)) { ?>
+<section class="uazoh7-section uazoh7-section-align-center uazoh7-notice">
+<div class="container">
+<div class="row">
+<div class="message">
+	<h2>奖项一览</h2>
+</div>
+<div class="col-lg-12">
+<?php if(isset($smof_data['feature_title']) && ($smof_data['feature_title'] !='')) {echo '<h2>'.$smof_data['feature_title'].'</h2>';}?>
+<?php if(isset($smof_data['feature_subheading']) && ($smof_data['feature_subheading'] !='')) { echo '<p class="block-description">'.$smof_data['feature_subheading'].'</p>'; }?>
+<?php if(isset($smof_data['feature_yext']) && ($smof_data['feature_yext'] !='')) { echo '<p>'.$smof_data['feature_yext'].'</p>'; }?>
+<div class="uazoh7-relative" id="latest-projects">
+<?php dynamic_sidebar( 'homepage-project' ); ?>
+<div class="uazoh7-navigation rivaslider-navigation">
+<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+
+</div>
+<div class="message qcode">
+	<h2>关注一下</h2><br/>
+	<div class="wechat"></div>
+	<div class="weibo"></div>
+</div>
+</div>
+</div>
+</section>
+<?php }
+
 
 /* 声明 */ 
 

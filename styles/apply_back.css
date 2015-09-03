@@ -4,7 +4,7 @@ body{
 
 .main {
 	margin: 20px auto;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 50px;
 }
 
@@ -25,4 +25,41 @@ span.normal {
 	display: inline-block;
 	width: 216px;
 	height: 65px;
+}
+
+
+.zh {
+    display: block;
+}
+
+.en {
+    display: none;
+}
+
+.change-en {
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px){
+.change-en {
+    padding-left: 60px;
+}
+}
+
+@media (min-width: 992px){
+.change-en {
+    padding-left: 15px;
+}
+}
+
+@media (min-width: 768px){
+	.change-en {
+    padding-left: 15px;
+}
 }

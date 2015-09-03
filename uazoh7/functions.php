@@ -84,6 +84,16 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
+'name' => '首页活动',
+'id' => 'homepage-activity',
+'description' => '',
+'before_widget' => '',
+'after_widget' => '',
+'before_title' => '',
+'after_title' => '',
+));
+
+register_sidebar(array(
 'name' => '首页项目展示',
 'id' => 'homepage-project',
 'description' => '',

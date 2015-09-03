@@ -5,6 +5,7 @@ function uazoh_widgets_init() {
 register_widget('uazoh_Widget_Categories_List');
 register_widget('uazoh_Widget_Articles_Tabs_List');
 register_widget('uazoh_Widget_Homepage_post');
+register_widget('uazoh_Widget_Homepage_activity');
 register_widget('uazoh_Widget_Homepage_project');
 }
 
@@ -311,9 +312,9 @@ $cat_posts = new WP_Query( array('cat' => $cat_ID,'posts_per_page' => $instance[
 <figure><a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($post->ID,'uazoh-image-size-7'); ?></a>
 <figcaption><a href="<?php $thumrb_id = get_post_thumbnail_id($post->ID);$image_urrl = wp_get_attachment_url($thumrb_id); echo $image_urrl; ?>" title="<?php the_title(); ?>" class="colorbox"><i class="fa fa-plus"></i></a></figcaption></figure>
 <div class="header">
-<div class="date">
-<span class="day"><?php the_time('d') ?></span><span class="month"><?php the_time('Y') ?>,<?php the_time('m') ?></span>
-</div>
+<!-- <div class="date">
+<span class="day"><?php //the_time('d') ?></span><span class="month"><?php //the_time('Y') ?>,<?php //the_time('m') ?></span>
+</div> -->
 <p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank"> <?php the_title(); ?></a>
 </div>
 <p><?php the_excerpt();?></p>
@@ -447,4 +448,96 @@ $instance['orderby'] = $new_instance['orderby'];
 $instance['display_type'] = $new_instance['display_type'];
 return $instance;
 }
+}
+
+/*
+ * uazoh_Widget_Homepage_activity
+ */
+
+class uazoh_Widget_Homepage_activity extends WP_Widget {
+
+function __construct() {
+$widget_ops = array('classname' => 'uazoh7-homepage-activity', 'description' => __('请选择要显示的分类', 'uazoh'));
+$control_ops = array('width' => 'auto', 'height' => 'auto');
+parent::__construct('uazoh_Widget_Homepage_activity', __('Uazoh主题首页活动', 'uazoh'), $widget_ops, $control_ops);
+}
+
+function widget( $args, $instance ) {
+extract( $args );
+$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+$query_args['posts_per_page'] = $instance['number_of_article'];
+$query_args['orderby'] = $instance['orderby'];
+echo $before_widget;
+if ( ! empty( $title ) ) {
+echo $before_title . $title . $after_title;
+}
+
+$posts = uazoh_widget_posttype_build_query( $query_args );
+
+if ( ! empty( $instance['categories'] ) && $posts->have_posts() ) : ?>
+<?php foreach ( $instance['categories'] as $cat_ID ) : 
+$cat_posts = new WP_Query( array('cat' => $cat_ID,'posts_per_page' => $instance['number_of_article']) );if ( $cat_posts->have_posts() ) :?>
+<?php $post_index = 1; while ( $cat_posts->have_posts() ) : $cat_posts->the_post(); ?>
+<!-- <article class="uazoh7-post-preview uazoh7-padding-left-30"> -->
+<div class="uazoh7-post-preview-inner">
+<!-- <figure><a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"><?php //echo get_the_post_thumbnail($post->ID,'uazoh-image-size-7'); ?></a>
+<figcaption><a href="<?php //$thumrb_id = get_post_thumbnail_id($post->ID);$image_urrl = wp_get_attachment_url($thumrb_id); //echo $image_urrl; ?>" title="<?php the_title(); ?>" class="colorbox"><i class="fa fa-plus"></i></a></figcaption></figure>
+<div class="header">
+<div class="date"> -->
+<!-- <span class="day"><?php //the_time('d') ?></span><span class="month"><?php //the_time('Y') ?>,<?php //the_time('m') ?></span>
+</div> -->
+<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank"> <?php the_title(); ?></a>
+</div>
+<!-- <p><?php the_excerpt();?></p>
+</p></div> -->
+<!-- </article> -->
+<?php $post_index++; endwhile; endif;wp_reset_postdata();endforeach;endif;  $posts->have_posts();wp_reset_postdata();echo $after_widget;}
+function form($instance) {
+$defaults = array(
+'title' => '',
+'categories' => array(),
+'number_of_article' => 3,
+'orderby' => 'lastest',
+);
+$instance = wp_parse_args( (array) $instance, $defaults );
+$title = strip_tags( $instance['title'] );
+
+$form['categories'] = $instance['categories'];
+$form['number_of_article'] = (int) $instance['number_of_article'];
+$form['orderby'] = $instance['orderby'];
+?>
+<p><label for="<?php echo $this->get_field_id('categories'); ?>"><?php _e('分类:', 'uazoh'); ?></label><select class="widefat" id="<?php echo $this->get_field_id('categories'); ?>" name="<?php echo $this->get_field_name('categories'); ?>[]" multiple="multiple" size="5" autocomplete="off"><option value=""><?php _e('-- None --', 'uazoh'); ?></option><?php $categories = get_categories();
+foreach ($categories as $category) {
+printf('<option value="%1$s" %4$s>%2$s (%3$s)</option>', $category->term_id, $category->name, $category->count, (in_array($category->term_id, $form['categories'])) ? 'selected="selected"' : '');
+}
+?>
+</select></p><p><label for="<?php echo $this->get_field_id('number_of_article'); ?>"><?php _e('显示多少文章:', 'uazoh'); ?></label><input class="widefat" type="number" min="2" id="<?php echo $this->get_field_id('number_of_article'); ?>" name="<?php echo $this->get_field_name('number_of_article'); ?>" value="<?php echo esc_attr( $form['number_of_article'] ); ?>"></p><p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('排序:', 'uazoh'); ?></label><select class="widefat" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>" autocomplete="off"><?php
+$orderby = array(
+'lastest' => __('最新', 'uazoh'),
+'most_comment' => __('评论数', 'uazoh'),
+'random' => __('随机', 'uazoh')
+);
+foreach ($orderby as $value => $title) {
+printf('<option value="%1$s" %3$s>%2$s</option>', $value, $title, ($value === $form['orderby']) ? 'selected="selected"' : '');
+}
+?>
+</select>
+</p>
+<?php
+}
+
+function update($new_instance, $old_instance) {
+$instance = $old_instance;
+$instance['title'] = strip_tags($new_instance['title']);
+$instance['categories'] = (empty($new_instance['categories'])) ? array() : array_filter($new_instance['categories']);
+$instance['number_of_article'] = (int) $new_instance['number_of_article'];
+if ( 0 >= $instance['number_of_article'] ) {
+$instance['number_of_article'] = 3;
+}
+$instance['orderby'] = $new_instance['orderby'];
+$instance['display_type'] = $new_instance['display_type'];
+
+return $instance;
+}
+
 }
