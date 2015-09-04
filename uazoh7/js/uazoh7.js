@@ -62,7 +62,7 @@
     		jQueryelems = jQuerythis.find('.uazoh7-listing-item');
     	jQuerythis.css({
     		'margin-left' : -offset,
-    		'width' : w
+    		'width' : '400px'
     	});
     	if (jQuerythis.hasClass('uazoh7-projects-listing-3-cols')) {
     		if (bodyW < 768) {
@@ -551,6 +551,39 @@
 	}, function () {
 		jQuery('.world').animate({height:"0px"}, 500);
 	});
+
+
+	var page = 1;     
+    jQuery(".arrow-left").click(function(){ 
+         var content = jQuery("div#latest-projects");   
+         var content_list = jQuery("div.project-container");  
+         var v_width = content.width();  
+         var page_count = content.find(".uazoh7-post-preview").length;  
+         if( !content_list.is(":animated") ){    //判断“内容展示区域”是否正在处于动画  
+              if( page == page_count ){  //最后一个版面了,到第一个版面。  
+                content_list.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面  
+                page = 1;  
+              }else{  
+                content_list.animate({ left : '-='+v_width }, "slow");  //通过改变left值，达到每次换一个版面  
+                page++;  
+             }  
+         }  
+   });   
+    jQuery(".arrow-right").click(function(){  
+         var content = jQuery("div#latest-projects");   
+         var content_list = jQuery("div.project-container");  
+         var v_width = content.width();  
+         var page_count = content.find(".uazoh7-post-preview").length;  
+         if(!content_list.is(":animated") ){    //判断“内容展示区域”是否正在处于动画  
+             if(page == 1 ){  //第一个版面了,跳转到最后一个版面。  
+                content_list.animate({ left : '-='+v_width*(page_count-1) }, "slow");  
+                page = page_count;  
+            }else{  
+                content_list.animate({ left : '+='+v_width }, "slow");  
+                page--;  
+            }  
+        }  
+    }); 
 
 
 })(jQuery);

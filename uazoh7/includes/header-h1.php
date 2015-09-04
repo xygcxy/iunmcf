@@ -29,7 +29,7 @@
 				  <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.png" alt="<?php bloginfo( 'name' ) ?>"><?php }?>
                   <p class="logo"><?php if(!empty($smof_data['site_logo_name'])) {echo $smof_data['site_logo_name'];}else {echo 'Uazoh7';}?></p>
                   <p class="tagline"><?php if(!empty($smof_data['logo_displaytext'])) {echo $smof_data['logo_displaytext'];}else {echo '极致、简约、细节、亲和';}?></p>
-                  <p class="logo-en">International University New Media Cultural Festival</p>
+                  <!-- <p class="logo-en">International University New Media Cultural Festival</p> -->
                 </div>
                 </a>
 				<?php wp_nav_menu( array('theme_location' => 'top_menu','container'=> 'nav','menu_id' => 'main_nav','menu_class' => 'main-menu','sort_column' => 'menu_order','fallback_cb' => ''));?>

@@ -3,23 +3,23 @@
 <footer class="uazoh7-footer">
 <div class="sponsor">
 <div class="sponsor-main">
-         <div class="col-lg-2 col-md-1 sponsor-content">
-            <img src="./wp-content/themes/uazoh7/img/china-edu.png" class="sponsor-img">
+         <div class="col-lg-2 col-md-1 sponsor-content sponsor1">
+
           </div>
 
-          <div class="col-lg-4 col-md-2 sponsor-content">
-             <img src="./wp-content/themes/uazoh7/img/sina-weibo.png" class="sponsor-img">
+          <div class="col-lg-4 col-md-2 sponsor-content sponsor2">
+             
             </div>
 
-          <div class="col-lg-3 col-md-3 sponsor-content">
-             <img src="./wp-content/themes/uazoh7/img/youku.png" class="sponsor-img">
+          <div class="col-lg-3 col-md-3 sponsor-content sponsor3">
+             
           </div>
 
-          <div class="col-lg-3 col-md-4 sponsor-content">
-             <img src="./wp-content/themes/uazoh7/img/qq.png" class="sponsor-img">
+          <div class="col-lg-3 col-md-4 sponsor-content sponsor4">
+
           </div>
-          <div class="col-lg-3 col-md-5 sponsor-content">
-             <img src="./wp-content/themes/uazoh7/img/china-radio.png" class="sponsor-img">
+          <div class="col-lg-3 col-md-5 sponsor-content sponsor5">
+
           </div>
 
       </div>

@@ -399,12 +399,15 @@ $cat_posts = new WP_Query( array('cat' => $cat_ID,'posts_per_page' => $instance[
 <?php $post_index = 1; while ( $cat_posts->have_posts() ) : $cat_posts->the_post(); ?>
 <article class="uazoh7-project uazoh7-padding-left-30">
 <div class="uazoh7-project-inner">
-<figure><a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail($post->ID,'uazoh-image-size-6'); ?></a><figcaption><a href="<?php $thumrb_id = get_post_thumbnail_id($post->ID);$image_urrl = wp_get_attachment_url($thumrb_id); echo $image_urrl; ?>" title="<?php the_title(); ?>" class="colorbox"><i class="fa fa-plus"></i></a></figcaption></figure>
+<figure><a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($post->ID,'uazoh-image-size-6'); ?></a><figcaption><a href="<?php $thumrb_id = get_post_thumbnail_id($post->ID);$image_urrl = wp_get_attachment_url($thumrb_id); echo $image_urrl; ?>" title="<?php the_title(); ?>" class="colorbox"><i class="fa fa-plus"></i></a></figcaption></figure>
 <div class="uazoh7-project-details">
-<div class="uazoh7-project-likes"><i class="fa fa-thumbs-o-up"></i> <?php post_views('', ''); ?></div>
+<!-- <div class="uazoh7-project-likes"><i class="fa fa-thumbs-o-up"></i> <?php //post_views('', ''); ?></div> -->
 <p class="link"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></p>
-<p class="filter"><?php the_tags(' ', ' , ' , ''); ?></p>
+<!-- <p class="filter"><?php //the_tags(' ', ' , ' , ''); ?></p> -->
+<p><?php the_excerpt();?></p>
 </div></div></article>
+
+
 <?php $post_index++; endwhile; endif;wp_reset_postdata();endforeach;endif;  $posts->have_posts();wp_reset_postdata();echo $after_widget;}
 function form($instance) {
 $defaults = array(

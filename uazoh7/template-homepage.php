@@ -82,6 +82,7 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 <div class="container">
 <div class="row">
 <div class="col-lg-12 col-md-12">
+<div class="line"></div>
 <?php if(isset($smof_data['homepage_post_title']) && ($smof_data['homepage_post_title'] !='')) {echo '<h2>'.$smof_data['homepage_post_title'].'</h2>';}?>
 <div class="uazoh7-relative" id="latest-news">
 <?php dynamic_sidebar( 'homepage-post' ); ?>
@@ -92,7 +93,7 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 </div>
 </div>
 <div class="activity">
-<h2 style="margin-top: 0px;">活动一览</h2>
+<div class="line"></div><h2 style="margin-top: 0px;">活动一览</h2>
 	<ul>
 		<li><?php dynamic_sidebar( 'homepage-activity' ); ?></li>
 	</ul>
@@ -108,22 +109,30 @@ if(isset($smof_data['feature_switch']) && ($smof_data['feature_switch'] != 0)) {
 <div class="container">
 <div class="row">
 <div class="message">
-	<h2>奖项一览</h2>
+	<div class="line"></div><h2>奖项一览</h2>
 </div>
 <div class="col-lg-12">
+<div class="line"></div>
 <?php if(isset($smof_data['feature_title']) && ($smof_data['feature_title'] !='')) {echo '<h2>'.$smof_data['feature_title'].'</h2>';}?>
 <?php if(isset($smof_data['feature_subheading']) && ($smof_data['feature_subheading'] !='')) { echo '<p class="block-description">'.$smof_data['feature_subheading'].'</p>'; }?>
 <?php if(isset($smof_data['feature_yext']) && ($smof_data['feature_yext'] !='')) { echo '<p>'.$smof_data['feature_yext'].'</p>'; }?>
+<div class="more-project"><a href="">更多>></a></div>
 <div class="uazoh7-relative" id="latest-projects">
+<div class="project-container">
 <?php dynamic_sidebar( 'homepage-project' ); ?>
-<div class="uazoh7-navigation rivaslider-navigation">
-<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a>
-</div>
 </div>
 
 </div>
+<div id="navigation">
+<span class="arrow-nav arrow-left"><i class="fa fa-chevron-left"></i></span><span class="arrow-nav arrow-right"><i class="fa fa-chevron-right"></i></span>
+</div>
+<!-- <div class="uazoh7-navigation rivaslider-navigation">
+<a href="" class="back"><i class="fa fa-chevron-left"></i></a> <a href="" class="forward"><i class="fa fa-chevron-right"></i></a>
+</div> -->
+
+</div>
 <div class="message qcode">
-	<h2>关注一下</h2><br/>
+	<div class="line"></div><h2>关注一下</h2><br/>
 	<div class="wechat"></div>
 	<div class="weibo"></div>
 </div>
@@ -131,6 +140,9 @@ if(isset($smof_data['feature_switch']) && ($smof_data['feature_switch'] != 0)) {
 </div>
 </section>
 <?php }
+
+
+
 
 
 /* 声明 */ 

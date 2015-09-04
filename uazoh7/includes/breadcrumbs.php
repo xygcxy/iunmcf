@@ -1,4 +1,6 @@
-<?php function uazoh_breadcrumbs(){$delimiter= '<i class="fa fa-angle-double-right"></i>';
+<?php 
+function uazoh_breadcrumbs(){
+$delimiter= '<i class="fa fa-angle-double-right"></i>';
   if ( !is_home() || is_paged() ) {
     global $post;
     $homeLink = home_url();
@@ -83,5 +85,6 @@
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
 
-	}else{ echo ' <a href="' . $homeLink . '">' . __( 'Home' , 'uazoh' ) . '</a> ';}}
+	}else{ echo ' <a href="' . $homeLink . '">' . __( 'Home' , 'uazoh' ) . '</a> ';}
+}
 ?>
