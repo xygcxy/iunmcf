@@ -586,6 +586,24 @@
     }); 
 
 
+	var index =0;
+	//3秒轮播一次
+	// var timer = setInterval(function(){
+	//     index = (index == 3) ? 0 : index + 1;          
+	//     //某个div显示，其他的隐藏
+	//     jQuery('.award-info > p').hide().eq(index).show('slow');    
+	// }, 3000);
+    jQuery('.award-right').click(function () {
+    	index = (index == 3) ? 0 : index + 1;  
+    	jQuery('.award-info > p').hide().eq(index).fadeIn('3000');  
+    });
+
+    jQuery('.award-left').click(function () {
+    	index = (index == 0) ? 3 : index - 1;  
+    	jQuery('.award-info > p').hide().eq(index).fadeIn('3000');  
+    });
+
+
 })(jQuery);
 /* SIDEBAR FIXED BOX */
 jQuery(window).on('load', function () {

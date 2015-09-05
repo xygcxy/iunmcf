@@ -242,7 +242,7 @@ input[type=submit],input[type=file],input[type=button],button[type=submit],butto
 .uazoh7-post-preview .header .date span{width:100%;float:left;line-height:35px;text-align:center}
 .uazoh7-post-preview .header .date span.month{line-height:15px;font-size:10px;text-transform:uppercase;letter-spacing:1px;border-top-width:1px;border-top-style:solid}
 .uazoh7-post-preview .header .date span.day{font-size:24px;font-weight:600;color:#333}
-.uazoh7-post-preview figure{float:left;width:100%;/*margin-bottom:20px;*/position:relative;z-index:1;overflow:hidden}
+.uazoh7-post-preview figure{float:left;/*width:100%;*/width:38%;/*margin-bottom:20px;*/position:relative;z-index:1;overflow:hidden}
 .uazoh7-post-preview figure img{float:left}
 .uazoh7-post-preview figure figcaption{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;overflow:hidden;display:none}
 .uazoh7-post-preview figure figcaption i{display:inline-block;position:absolute;font-size:24px;background-color:#fff;text-align:center;line-height:64px;border-radius:100px;width:60px;height:60px;top:0;margin-top:-30px;left:50%;margin-left:-30px}
@@ -485,7 +485,7 @@ h3.h3-2{width:100%;margin:0;padding:0;margin-bottom:15px;text-transform:uppercas
 p.blog-cat{font-size:140%;color:#333;margin-bottom:30px}
 .riva-toggle-tab h2{width:100%;border-bottom-width:1px;border-bottom-style:solid;margin:0;padding:0;padding-bottom:15px;margin-bottom:30px}
 .uazoh7-post{width:100%;display:inline-block;position:relative;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:75px;margin-bottom:30px;padding-bottom:20px;border:0 solid #e5e5e5;border-bottom-width:1px}
-.uazoh7-post .img{margin-bottom:30px;width:100%;/*display:inline-block;*/display:inline-block;}
+.uazoh7-post .img{margin-bottom:30px;width:100%;/*display:inline-block;*/display:none;}
 .uazoh7-post img[class*="wp-image-"] {background-color: #F6F6F6;border: 1px solid #E6E6E6;padding: 16px;}
 .uazoh7-post figure{margin-bottom:30px;width:100%;float:left;max-height:200px;overflow:hidden;position:relative}
 .nvor-post figure img{position:absolute;max-width:100%;left:0;top:auto}
@@ -676,9 +676,8 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 
 @media (min-width: 1200px){
 	.uazoh7-section-align-left .activity {
-       	width: 30%%;
-    	margin-left: 60px;
-    	float: left;
+       	width: 30%;
+    	float: right;
 }
 }
 
@@ -700,6 +699,10 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 	padding-left: 10px;
 }
 
+.activity .more-project {
+	padding-right: 50px;
+}
+
 .uazoh7-section-align-left .uazoh7-navigation{
 	width: 100%;
 	text-align: left;	
@@ -712,20 +715,63 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
     border-bottom-width: 1px;
 }
 .message {
-	width: 28%;
+	width: 25%;
     float: left;
     margin-left: 50px;
+    position: relative;
 }
+
+.award-list {
+	background: url(../img/award.png) no-repeat;
+	height: 188px;
+	width: 162px;
+	text-align: center;
+}
+
+#award {
+	position: absolute;
+	top: 60%;
+    width: 162px;
+}
+
+#award .arrow-nav {
+	background-color: #9d9e9f;
+}
+
+.award-info {
+	width: 162px;
+	text-align: center;
+	padding-top: 83px;
+}
+
+.award-list p{
+    font-size: 25px;
+    color: #fff;
+}
+
+.award-right {
+	position: absolute;
+	right: 0;
+}
+
 .review {
 	margin-left: 0;
 }
 .review h4, .qcode h4 {
 	margin-top: 0;
 }
+
 .qcode {
-	margin-left: 60px;
 	width: 28%;
+    float: right;
 }
+
+@media (max-width: 992px){
+	.qcode {
+	width: 100%;
+}
+}
+
 
 .wechat {
 	width: 36%;
@@ -746,7 +792,7 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 	border-top: 1px solid #e5e5e5;
 	text-align: left;
 }
-@media (min-width: 1200px){
+
 	.uazoh7-notice .col-lg-12 {
     width: 390px;
     position: relative;
@@ -756,7 +802,7 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 .uazoh7-notice h2{
 		padding-left: 10px;
 	}
-}
+
 
 /*.uazoh7-project {
 	width: 400px !important;
@@ -881,6 +927,15 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 
 .uazoh7-section-align-left h2 {
 	padding-left: 10px;
+}
+
+.uazoh7-section-align-left .content {
+	float: left;
+    width: 400px;
+}
+
+.uazoh7-section-align-left article {
+	width: 780px !important;
 }
 
 #latest-projects {
