@@ -28,7 +28,7 @@ if ($apply_type == 'film') {
 		'manufacturer'	=>	$_POST['manufacturer'],
 		'producer'	=>	$_POST['producer'],
 		'director'	=>	$_POST['director'],
-		'pianner'	=>	$_POST['pianner'],
+		'planner'	=>	$_POST['planner'],
 		'photoer'	=>	$_POST['photoer'],
 		'editor'	=>	$_POST['editor'],
 		'sound'	=>	$_POST['sound'],
