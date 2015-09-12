@@ -604,6 +604,8 @@
     });
 
 
+
+
 })(jQuery);
 /* SIDEBAR FIXED BOX */
 jQuery(window).on('load', function () {

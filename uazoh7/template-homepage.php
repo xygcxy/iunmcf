@@ -8,7 +8,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<a href=""><i class="fa fa-<?php echo $smof_data['class_01_icon'] ?> film"></i></a><span class="arrow"></span><br />
+<a href="index.php/film/"><i class="fa fa-<?php echo $smof_data['class_01_icon'] ?> film"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_01_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_01'] ?></p>
@@ -17,7 +17,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header> 
-<a href=""><i class="fa fa-<?php echo $smof_data['class_02_icon'] ?> communication"></i></a><span class="arrow"></span><br />
+<a href="index.php/communication/"><i class="fa fa-<?php echo $smof_data['class_02_icon'] ?> communication"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_02_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_02'] ?></p>
@@ -26,7 +26,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<a href=""><i class="fa fa-<?php echo $smof_data['class_03_icon'] ?> design"></i></a><span class="arrow"></span><br />
+<a href="index.php/design/"><i class="fa fa-<?php echo $smof_data['class_03_icon'] ?> design"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_03_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_03'] ?></p>
@@ -35,7 +35,7 @@ if(isset($smof_data['class_news']) && ($smof_data['class_news'] != 0)) { ?>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <article class="uazoh7-feature-2">
 <header>
-<a href=""><i class="fa fa-<?php echo $smof_data['class_04_icon'] ?> innovation"></i></a><span class="arrow"></span><br />
+<a href="index.php/innovation/"><i class="fa fa-<?php echo $smof_data['class_04_icon'] ?> innovation"></i></a><span class="arrow"></span><br />
 <?php echo $smof_data['class_04_title'] ?><br />
 </header>
 <p><?php echo $smof_data['class_04'] ?></p>
