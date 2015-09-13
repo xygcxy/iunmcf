@@ -1,18 +1,21 @@
-window.onload = function (){
+// window.onload = function (){
     var url = window.location.pathname;
     var id;
+    var info;
     if (url.indexOf('film') > 0) {
         id = '1';
+        info = 'film_list/film_info';
     } else if (url.indexOf('communication') > 0) {
         id = '2'; 
+        info = 'communication_list/film_info';
     } else if (url.indexOf('design') > 0 ){
         id = '3';
+        info = 'design_list/film_info';
     } else if (url.indexOf('innovation') > 0) {
         id = '4';
+        info = 'innovation_list/film_info';
     }
-    ajaxRequest(id);
-    console.log(id);
-}
+// }
 	var xmlHttpRequest = null;
 	var content,
         contenting;
@@ -63,7 +66,7 @@ function setValue(content){
     var div_content = document.getElementById("div_content");
     var _html = "";
     for(var i = 0;i < 5;i++){
-        _html += "<div><a href='?id="+content[i].id+"'><img src=http://localhost/wordpress/wp-content/themes/uazoh7/img/images/"+ content[i].id +".jpg><span>"+ content[i].name +"</span></a></div>";
+        _html += "<div><a href="+info+"?id="+content[i].id+"'><img src=http://localhost/wordpress/wp-content/themes/uazoh7/img/images/"+ content[i].id +".jpg><span>"+ content[i].name +"</span></a></div>";
     }
         div_content.innerHTML = _html;
 }

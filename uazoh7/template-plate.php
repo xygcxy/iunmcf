@@ -12,13 +12,28 @@ Template Name: plate
  $innovation_type = strpos($_SERVER['PHP_SELF'], 'innovation');
  if ($film_type) {
  	$type_id = '1';
+ 	$info = 'film_list/film_info';
  } else if ($communication_type) {
  	$type_id = '2';
+ 	$info = 'communication_list/communication_info';
  } else if ($design_type) {
  	$type_id = '3';
+ 	$info = 'design_list/design_info';
  } else if ($innovation_type) {
  	$type_id = '4';
+ 	$info = 'innovation_list/innovation_info';
  }
+ 		$conn = mysql_connect("localhost","root","");
+		if (!$conn)
+		  {
+		  die('Could not connect: ' . mysql_error());
+		  }
+		mysql_query("set names utf8");
+		mysql_query("set global time_zone= '+08:00'");
+		mysql_select_db("xikingwenhua", $conn);
+        $Page_size=12; //每页显示的条目数
+		$sql="SELECT * from `competition` WHERE type = '$type_id' limit 5";
+        $result=mysql_query($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +70,7 @@ Template Name: plate
 		 document.getElementById(spanName+divId).style.backgroundColor="#c9cacb";
 		}
 	</script> 
-	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/change.js'?>></script>
+	
 </head>
 <body style="margin:0;padding:0;">
 	<!-- 视频图片轮播显示 -->
@@ -102,11 +117,15 @@ Template Name: plate
 			<div class="line"></div>
 				<div style="float:left;margin-left:10px;font-size:20px;line-height: 33px;"> 作品一览</div>
 				<div style="float:right;"> 
-					<a href="#" onclick=<?php echo 'ajaxRequest('.$type_id.')'; ?> style="margin-right:30px;"> <img src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/img/images/2-5.jpg';?>> 换一换 </a> <a href="film_list"> 更多>> </a>
+					<a href="#" onclick=<?php echo 'ajaxRequest('.$type_id.')'; ?> style="margin-right:30px;" class="change"> <img src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/img/images/2-5.jpg';?>> 换一换 </a> <a href="film_list"> 更多>> </a>
 				</div>
 			</div>
 			<div style="clear:both;"></div>
-			<div id="div_content" style="width:1100px;height:160px;margin-top:10px;"></div>
+			<div id="div_content" style="width:1100px;height:160px;margin-top:10px;">
+				<?php while ($row = mysql_fetch_array($result)) { ?>
+				<div><a href=<?php echo $info.'?id='.$row['id'];?>><img src=<?php echo 'http://localhost/wordpress/wp-content/themes/uazoh7/img/images/'.$row['id'].'.jpg'?>><span><?php echo $row['name'];?></span></a></div>
+				<?php }?>
+			</div>
 		</div>
 		<div style="width:960px;height:300px;margin-top:10px;">
 			<div class="info">
@@ -191,6 +210,7 @@ Template Name: plate
 		<div style="clear:both;"></div>
 	</div>
 	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/jquery-1.8.0.min.js';?>></script>
+	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/change.js'?>></script>
 	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/flash.js';?>></script>
 </body>
 </html>
