@@ -867,6 +867,11 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 	background-size: 99%;
 }
 
+.sponsor6 {
+	background: url(../img/china-new.png) no-repeat 0px;
+	background-size: 99%;
+}
+
 .sponsor-content {
 	width: 22%;
     height: 68px;
@@ -882,7 +887,7 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 }
 
 .sider-nav {
-    width: 220px;
+    width: 230px;
     float: left;
     text-align: right;
     padding-bottom: 200px;
@@ -923,6 +928,10 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 .more-project {
 	float: right;
 	padding-top: 5px;
+}
+
+.uazoh7-section-align-left .more-project {
+	padding-right: 30px;
 }
 
 .uazoh7-section-align-left h2 {
@@ -1039,6 +1048,20 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 }
 
 #msg{float:left; margin-top:40px; font-size:18px; color:#f00;margin-left: 20px;}
+.bar{margin-top: 10px;width: 100px;height: 14px; line-height:12px; border:1px solid #f0f0f0;  
+position:relative; text-align:center} 
+.bar span{display:block; height:12px; } 
+.bar i{position:absolute; top:0; left:104px;} 
+#bar_up span{background:#360} 
+
+.information input {
+	min-width: 290px;
+}
+
+.information textarea {
+	width: 380px;
+	height: 230px;
+}
 
 
 

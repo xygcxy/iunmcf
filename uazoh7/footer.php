@@ -21,6 +21,9 @@
           <div class="col-lg-3 col-md-5 sponsor-content sponsor5">
 
           </div>
+          <div class="col-lg-3 col-md-6 sponsor-content sponsor6">
+
+          </div>
 
       </div>
       </div>

@@ -35,6 +35,22 @@
 	// global $wpdb;
 	// $mylink = $wpdb->get_row("SELECT * FROM $wpdb->competition WHERE id = 1");
 	// print_r($mylink);
+	$query_vote = mysql_query("select * from competition where id=".$id);
+	$row = mysql_fetch_array($query_vote);
+	$vote = $row['vote'];
+	$type = $row['type'];
+	$query_count = mysql_query("select SUM(vote) as count FROM competition where type = '$type'");
+	$row_count = mysql_fetch_array($query_count);
+	$arr['like'] = $vote;
+	$count = $row_count['count'];
+	if($count != '0') {
+		$like_percent = round($vote/$count,3)*100;
+	} else {
+		$like_percent = '0';
+	}
+
+	$arr['like_percent'] = $like_percent.'%';
+
 
 ?>
 <html>
@@ -52,6 +68,10 @@
 		</div>
 		<div class="detail-info">
 			<div class="vote">投我一票</div>
+			<div id="bar_up" class="bar">
+			<span></span>
+			<i><?php echo $arr['like_percent']; ?></i>
+			</div> 
 			<div class="detail">
 				<p>作品编码：<?php echo $row['work_id']; ?></p>
 				<p>作品名称：<?php echo $row['name']; ?></p>
@@ -90,6 +110,7 @@
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"xyg-blog"};
 	(function() {
+		$("#bar_up span").css("width",<?php echo  $like_percent;?>); 
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
 		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
@@ -101,13 +122,17 @@ var duoshuoQuery = {short_name:"xyg-blog"};
     $(".vote").click(function(){ 
     	var id = "<?php echo $id;?>";
     	var url = "<?php echo $http.'/wordpress/wp-content/themes/uazoh7/vote.php';?>";
-        getdata(url+"?id="+id,id); 
+        getdata(url+"?id="+id); 
     }); 
 
-    function getdata(url,sid){ 
-    $.getJSON(url,{id:sid},function(data){    
+    function getdata(url){ 
+    $.getJSON(url,function(data){    
     	if(data.success==1){//投票成功 
             alert('投票成功');
+            $("#num_up").html(data.like); 
+            //通过控制宽度来显示百分比进度条效果 
+            $("#bar_up span").css("width",data.like_percent); 
+            $("#bar_up i").html(data.like_percent); 
         }else{//投票失败 
             $("#msg").html(data.msg).show().css({'opacity':1,'top':'40px'}) 
             .animate({top:'-50px',opacity:0}, "slow"); 

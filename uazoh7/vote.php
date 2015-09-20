@@ -42,16 +42,21 @@ function likes($type,$id,$ip){
 }  
 
 function jsons($id){
-	$query = mysql_query("select * from votes where id=".$id);
+	$query = mysql_query("select * from competition where id='$id'");
 	$row = mysql_fetch_array($query);
-	$like = $row['likes'];
-	$unlike = $row['unlikes'];
+	$vote = $row['vote'];
+	$type = $row['type'];
+	$count_query = mysql_query("select SUM(vote) as count FROM competition where type = '$type'");
+	$row_count = mysql_fetch_array($count_query);
 	$arr['success']=1;
-	$arr['like'] = $like;
-	$arr['unlike'] = $unlike;
-	$like_percent = round($like/($like+$unlike),3)*100;
+	$arr['like'] = $vote;
+	$count = $row_count['count'];
+	if($count != '0') {
+		$like_percent = round($vote/$count,3)*100;
+	} else {
+		$like_percent = '0';
+	}
 	$arr['like_percent'] = $like_percent.'%';
-	$arr['unlike_percent'] = (100-$like_percent).'%';
 	
 	return json_encode($arr);
 }

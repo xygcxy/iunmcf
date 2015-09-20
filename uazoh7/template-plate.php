@@ -123,7 +123,7 @@ Template Name: plate
 			<div style="clear:both;"></div>
 			<div id="div_content" style="width:1100px;height:160px;margin-top:10px;">
 				<?php while ($row = mysql_fetch_array($result)) { ?>
-				<div><a href=<?php echo $info.'?id='.$row['id'];?>><img src=<?php echo 'http://localhost/wordpress/wp-content/themes/uazoh7/img/images/'.$row['id'].'.jpg'?>><span><?php echo $row['name'];?></span></a></div>
+				<div><a href=<?php echo $info.'?id='.$row['id'];?>><img src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/img/images/'.$row['id'].'.jpg'?>><span><?php echo $row['name'];?></span></a></div>
 				<?php }?>
 			</div>
 		</div>
@@ -138,26 +138,36 @@ Template Name: plate
 				</div>
 			</div>
 			<div style="clear:both;"></div>
-			<div class="left" style="width:560px;height:250px;float:left;margin-top:10px;">
+			<div class="left" style="width:560px;padding-bottom: 20px;float:left;margin-top:10px;">
 				<ul class="prize">
 					<li>
-						<div style="padding: 16px 34px;background-color:#c9cacb;float:left;color:#fff"> 年度奖 </div>
+						<div style="padding: 16px 34px;background-color:#c9cacb;float:left;color:#fff;text-align: center;width: 125px;"> <?php if ($type_id == '1'){echo "年度奖";} elseif($type_id == '2') {echo "年度奖";}elseif ($type_id == '3') { echo "学生奖"; }elseif ($type_id == '4') { echo "千里马奖"; } ?> </div>
 						<div style="width:410px;height:56px;float:right;">
-						最佳视频，最佳音效，最佳译制，最佳校园题材，最佳原创动画，最具人文关怀，最具商业价值，最具传播价值
+						<?php if ($type_id == '1'){echo "年度微视频、年度文化融合大奖";}elseif($type_id == '2'){echo "正能量传播奖";} else if($type_id == '3'){echo "最佳创意、最佳设计、最具互动传播价值、优秀作品";}else if($type_id == '4'){echo "最具商业投资价值奖、最具创新创意奖、最具应用价值奖";} ?>
 						</div>
 						<div style="clear:both;"></div>
 					</li>
 					<li>
-						<div style="padding:18px 20px;background-color:#c9cacb;margin-top:20px;float:left;color:#fff"> 新锐个人奖 </div>
+						<div style="padding:18px 20px;background-color:#c9cacb;margin-top:20px;float:left;color:#fff;text-align: center;width: 125px;"> <?php if ($type_id == '1'){echo "新锐个人奖";} elseif($type_id == '2') {echo "公众号奖";}elseif ($type_id == '3') { echo "园丁奖"; }elseif ($type_id == '4') { echo "伯乐奖"; } ?> </div>
 						<div style="width:410px;height:56px;float:right;margin-top:20px;">
-						最佳视频，最佳音效，最佳译制，最佳校园题材，最佳原创动画，最具人文关怀，最具商业价值，最具传播价值	
+						<?php if ($type_id == '1'){echo "制片人、导演、编剧、摄像、剪辑、演员";} elseif($type_id == '2'){echo "年度最具影响力院校公众号奖、年度最具影响力学生团体公众号奖、
+            年度最具影响力个人公众号奖";} elseif($type_id == '3'){echo "最佳指导教师";}elseif($type_id == '4'){echo "院校、产业园/孵化器、指导教师";} ?>	
 						</div>
 						<div style="clear:both;"></div>
 					</li>
-					<li>
-						<div style="padding:18px 34px;;background-color:#c9cacb;margin-top:20px;float:left;color:#fff"> 影片奖 </div>
+					<li class="third-li">
+						<div style="padding:18px 34px;;background-color:#c9cacb;margin-top:20px;float:left;color:#fff;text-align: center;width: 125px;"> <?php if ($type_id == '1'){echo "影片奖";} elseif($type_id == '2') {echo "自媒体奖";}?> </div>
 						<div style="width:410px;height:56px;float:right;margin-top:20px;">
-						最佳视频，最佳音效，最佳译制，最佳校园题材，最佳原创动画，最具人文关怀，最具商业价值，最具传播价值	
+						<?php if ($type_id == '1'){echo "最佳视效、最佳音效、最佳译制、最佳校园题材、最佳原创动画、
+          最具人文关怀、最具商业价值、最具传播价值
+";} elseif($type_id == '2'){echo "年度自媒体达人奖、年度自媒体新锐奖";} ?>	
+						</div>
+						<div style="clear:both;"></div>
+					</li>
+					<li class="fourth-li">
+						<div style="padding:18px 34px;;background-color:#c9cacb;margin-top:20px;float:left;color:#fff;text-align: center;width: 125px;"> 自媒体奖 </div>
+						<div style="width:410px;height:56px;float:right;margin-top:20px;">
+						年度自媒体达人奖、年度自媒体新锐奖	
 						</div>
 						<div style="clear:both;"></div>
 					</li>
@@ -212,6 +222,16 @@ Template Name: plate
 	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/jquery-1.8.0.min.js';?>></script>
 	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/change.js'?>></script>
 	<script type="text/javascript" src=<?php echo $http.'/wordpress/wp-content/themes/uazoh7/js/flash.js';?>></script>
+	<script type="text/javascript">
+	(function() {
+		var type = '<?php echo $type_id; ?>';
+		if (type == '3' || type == '4') {
+			$('.third-li').css('display', 'none');
+		} else if(type == '2'){
+			$('.fourth-li').css('display', 'block');
+		}
+	})()
+	</script>
 </body>
 </html>
 <?php get_footer(); ?>

@@ -84,7 +84,7 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 <div class="col-lg-12 col-md-12">
 <div class="line"></div>
 <?php if(isset($smof_data['homepage_post_title']) && ($smof_data['homepage_post_title'] !='')) {echo '<h2>'.$smof_data['homepage_post_title'].'</h2>';}?>
-<div class="more-project"><a href="">更多>></a></div>
+<div class="more-project"><a href="category/new/">更多>></a></div>
 <div class="uazoh7-relative" id="latest-news">
 <?php dynamic_sidebar( 'homepage-post' ); ?>
 <!-- <div class="uazoh7-navigation uazoh7-navigation-center rivaslider-navigation">
@@ -95,7 +95,7 @@ if(isset($smof_data['homepage_post']) && ($smof_data['homepage_post'] != 0)) { ?
 </div>
 <div class="activity">
 <div class="line"></div><h2 style="margin-top: 0px;">活动一览</h2>
-<div class="more-project"><a href="">更多>></a></div>
+<div class="more-project"><a href="category/activity/">更多>></a></div>
 	<ul>
 		<li><?php dynamic_sidebar( 'homepage-activity' ); ?></li>
 	</ul>
@@ -129,7 +129,7 @@ if(isset($smof_data['feature_switch']) && ($smof_data['feature_switch'] != 0)) {
 <?php if(isset($smof_data['feature_title']) && ($smof_data['feature_title'] !='')) {echo '<h2>'.$smof_data['feature_title'].'</h2>';}?>
 <?php if(isset($smof_data['feature_subheading']) && ($smof_data['feature_subheading'] !='')) { echo '<p class="block-description">'.$smof_data['feature_subheading'].'</p>'; }?>
 <?php if(isset($smof_data['feature_yext']) && ($smof_data['feature_yext'] !='')) { echo '<p>'.$smof_data['feature_yext'].'</p>'; }?>
-<div class="more-project"><a href="">更多>></a></div>
+<div class="more-project"><a href="category/mediaview/">更多>></a></div>
 <div class="uazoh7-relative" id="latest-projects">
 <div class="project-container">
 <?php dynamic_sidebar( 'homepage-project' ); ?>
